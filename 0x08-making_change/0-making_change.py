@@ -18,12 +18,12 @@ def makeChange(coins, total):
 
     # Use greedy approach for large inputs to improve performance
     coins.sort(reverse=True)
-    
+
     # Attempt to solve using greedy method
     count = 0
     for coin in coins:
         while total >= coin:
             total -= coin
             count += 1
-    
+
     return count if total == 0 else -1
